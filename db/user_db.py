@@ -8,7 +8,7 @@ class User(BaseModel):
     email: str
 
 database_users = Dict[str, User]
-database_users = [{"pao123":User(**{
+database_users = {"pao123":User(**{
                                 "user": "pao123",
                                 "password": "1234",
                                 "name":"Paola",
@@ -28,7 +28,7 @@ database_users = [{"pao123":User(**{
                                 "password": "1234",
                                 "name":"Ivan",
                                 "email": "i@correo.com" }),
-                }]
+                }
 
 def get_user(user: str):
     if user in database_users.keys():
